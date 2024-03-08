@@ -9,19 +9,11 @@ import org.testng.annotations.Test;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
+
 import selenideConfig.ConfigKeys;
 import selenideConfig.ExcelUtils;
-import selenidePage.CostCategoryPage;
-import selenidePage.CounterpartyPage;
-import selenidePage.ExternalContactsPage;
-import selenidePage.GlobalContactsPage;
-import selenidePage.GlobalPlanPage;
+
 import selenidePage.GooglePage;
-import selenidePage.InsurerContactsPage;
-import selenidePage.LineOfInsurancePage;
-import selenidePage.MainPage;
-import selenidePage.PolicyPage;
-import selenidePage.PremiumBasisPage;
 import selenidePage.ToolsQAPage;
 
 /**
