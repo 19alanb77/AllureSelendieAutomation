@@ -6,10 +6,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Story;
-
 import selenideConfig.ConfigKeys;
 import selenideConfig.ExcelUtils;
 
