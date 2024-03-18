@@ -57,36 +57,22 @@ public class ConfigKeys {
 	 *          
 	 * @return array with values from the file
 	 */ 
-	public static String[] csvReader(String csvFile) {
-
+	public static String[] csvReader(String csvFile) {	
 		String[] data = null;
-        BufferedReader br = null;
-        String line = "";
-        String cvsSplitBy = ",";
-
-        try {
-
-            br = new BufferedReader(new FileReader(csvFile));
-            br.readLine();
-            while ((line = br.readLine()) != null) {
-
-                data = line.split(cvsSplitBy);
-            }
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (br != null) {
-                try {
-                    br.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return data;
+        	String cvsSplitBy = ",";
+        	String temp = "";
+        	try {
+        		List<String> line = Files.readAllLines(Paths.get("./dataset/"+ csvFile + ".csv"));
+            		for(int i=1;i<line.size();i+=2) {
+            			temp += line.get(i) + cvsSplitBy;
+            		}
+            		data = temp.split(cvsSplitBy);
+        	} catch (FileNotFoundException e) {
+            		e.printStackTrace();
+        	} catch (IOException e) {
+            		e.printStackTrace();
+        	} 
+        	return data;
 	}
 	
 }
