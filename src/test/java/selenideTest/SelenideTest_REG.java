@@ -25,7 +25,7 @@ public class SelenideTest_REG {
 	
 	@DataProvider(name = "data")
 	public static Object[][] excelData() throws Exception{
-        Object[][] testObjArray = ExcelUtils.getTableArray(ConfigKeys.getConfigKey("SelenideTest_REG"),"Sheet1");        
+        Object[][] testObjArray = ExcelUtils.getTableArray("SelenideTest_REG","Sheet1");        
         return (testObjArray);
 	}
 	
