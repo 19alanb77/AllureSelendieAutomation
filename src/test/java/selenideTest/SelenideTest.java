@@ -15,7 +15,7 @@ import selenidePage.ToolsQAPage;
  */ 
 public class SelenideTest {
 
-	public String[] data = ConfigKeys.csvReader(ConfigKeys.getConfigKey("SelenideTest"));
+	public String[] data = ConfigKeys.csvReader("SelenideTest");
 	private static ToolsQAPage tools = new ToolsQAPage();
 	private static GooglePage google = new GooglePage();
 	
